@@ -1,0 +1,15 @@
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100%;
+}
+
+.graph{
+    height: 810px;
+    width: 1440px;
+    background-color: #2a2b32;
+    border-radius: 12px;
+    padding: 20px;
+}
