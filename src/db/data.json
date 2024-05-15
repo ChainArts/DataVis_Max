@@ -1,0 +1,88 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Salzburg",
+            "flats": 90933,
+            "flats_0_60": 0.4,
+            "flats_60_90": 0.36,
+            "flats_90_150": 0.19,
+            "flats_150": 0.04,
+            "unknown": 0.01,
+            "hotels": 306,
+            "offices": 857,
+            "industrial": 592,
+            "growth": -178
+        },
+        {
+            "id": 2,
+            "name": "Hallein",
+            "flats": 31605,
+            "flats_0_60": 0.25,
+            "flats_60_90": 0.32,
+            "flats_90_150": 0.31,
+            "flats_150": 0.12,
+            "unknown": 0,
+            "hotels": 325,
+            "offices": 188,
+            "industrial": 598,
+            "growth": -176
+        },
+        {
+            "id": 3,
+            "name": "Salzburg-Umgebung",
+            "flats": 80547,
+            "flats_0_60": 0.2,
+            "flats_60_90": 0.3,
+            "flats_90_150": 0.35,
+            "flats_150": 0.15,
+            "unknown": 0.01,
+            "hotels": 593,
+            "offices": 605,
+            "industrial": 1415,
+            "growth": -68
+        },
+        {
+            "id": 4,
+            "name": "St. Johann im Pongau",
+            "flats": 50009,
+            "flats_0_60": 0.32,
+            "flats_60_90": 0.31,
+            "flats_90_150": 0.26,
+            "flats_150": 0.1,
+            "unknown": 0.02,
+            "hotels": 2094,
+            "offices": 346,
+            "industrial": 806,
+            "growth": 19
+        },
+        {
+            "id": 5,
+            "name": "Tamsweg",
+            "flats": 10742,
+            "flats_0_60": 0.2,
+            "flats_60_90": 0.24,
+            "flats_90_150": 0.36,
+            "flats_150": 0.19,
+            "unknown": 0.01,
+            "hotels": 369,
+            "offices": 92,
+            "industrial": 243,
+            "growth": 195
+        },
+        {
+            "id": 6,
+            "name": "Zell am See",
+            "flats": 55779,
+            "flats_0_60": 0.29,
+            "flats_60_90": 0.3,
+            "flats_90_150": 0.29,
+            "flats_150": 0.12,
+            "unknown": 0.01,
+            "hotels": 2310,
+            "offices": 384,
+            "industrial": 939,
+            "growth": -145
+        }
+    ]
+}
