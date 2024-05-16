@@ -36,11 +36,11 @@ const Windows = ({ shape, count }: { shape: string, count: number }) => {
 };
 
 const House = ({ houseData, setSelected }: { houseData: HouseData, setSelected: Dispatch<SetStateAction<number>>}) => {
-    const height_0_60 = Math.floor(houseData.flats * houseData.flats_0_60 / 140);
-    const height_60_90 = Math.floor(houseData.flats * houseData.flats_60_90 / 140);
-    const height_90_150 = Math.floor(houseData.flats * houseData.flats_90_150 / 140);
-    const height_150 = Math.floor(houseData.flats * houseData.flats_150 / 140);
-    const height_unknown = Math.floor(houseData.flats * houseData.unknown / 140);
+    const height_0_60 = Math.round(houseData.flats * houseData.flats_0_60 / 140);
+    const height_60_90 = Math.round(houseData.flats * houseData.flats_60_90 / 140);
+    const height_90_150 = Math.round(houseData.flats * houseData.flats_90_150 / 140);
+    const height_150 = Math.round(houseData.flats * houseData.flats_150 / 140);
+    const height_unknown = Math.round(houseData.flats * houseData.unknown / 140);
 
     const isPositiveGrowth = houseData.growth > 0;
 
@@ -62,7 +62,7 @@ const House = ({ houseData, setSelected }: { houseData: HouseData, setSelected: 
             <div style={{ height: height_150 }} className="flats_150"></div>
             <div style={{ height: height_90_150 }} className="flats_90_150"></div>
             <div style={{ height: height_60_90 }} className="flats_60_90"></div>
-            <div style={{ height: height_unknown }} className="unknown"></div>
+            {height_unknown !== 0 ? <div style={{ height: height_unknown, minHeight: height_unknown > 0 ? "2px" : 0 }} className="unknown"></div> : null}
             <div style={{ height: height_0_60 }} className="flats_0_60"></div>
 
             {isPositiveGrowth ? 

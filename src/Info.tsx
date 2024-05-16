@@ -1,3 +1,5 @@
+import construction from './assets/construction.svg';
+
 interface HouseData {
     id: number;
     name: string;
@@ -23,19 +25,70 @@ const Info = ({ selected, houseData }: { selected: number, houseData: HouseData[
     const isPositiveGrowth = selectedHouse.growth > 0;
     return (
         <>
-            <h1>{selectedHouse.name}</h1>
-            <p>Flats: {selectedHouse.flats}</p>
-            <br/>
-            <p style={{color: "#eba0ac"}}>150m²+: {Math.round(selectedHouse.flats_150 * 100)}%</p>
-            <p style={{color: "#a6e3a1"}}>90-150m²: {Math.round(selectedHouse.flats_90_150 * 100)}%</p>
-            <p style={{color: "#74c7ec"}}>60-90m²: {Math.round(selectedHouse.flats_60_90*100)}%</p>
-            <p style={{color: "#6c7086"}}>Unknown: {Math.round(selectedHouse.unknown * 100)}%</p>
-            <p style={{ color: "#cba6f7" }}>0-60m²: {Math.round(selectedHouse.flats_0_60 * 100)}%</p>
-            <br/>
-            <p>Hotels: {selectedHouse.hotels}</p>
-            <p>Offices: {selectedHouse.offices}</p>
-            <p>Industrial: {selectedHouse.industrial}</p>
-            {isPositiveGrowth ? <p>Growth: {selectedHouse.growth}%</p> : <p>Decline: {selectedHouse.growth}%</p>}
+            
+            <h1 style={{ fontSize: selectedHouse.name.length > 12 ? "1.85rem" : "2.5rem" }}>{selectedHouse.name}</h1>
+            <div className="info-header">
+                <h2 className="flats">
+                    Wohnungen
+                    <span>{selectedHouse.flats}</span>
+                </h2>
+            </div>
+            <div className="flat-sizes">
+                <h2>Wohnungsgrößen</h2>
+                <div>
+                <div className="size info_0_60">
+                    <h3>0-60m²</h3>
+                    <span>{Math.round(selectedHouse.flats_0_60 * 100)}%</span>
+                </div>
+                <div className="size info_60_90">
+                    <h3>60-90m²</h3>
+                    <span>{Math.round(selectedHouse.flats_60_90 * 100)}%</span>
+                </div>
+                <div className="size info_90_150">
+                    <h3>90-150m²</h3>
+                    <span>{Math.round(selectedHouse.flats_90_150 * 100)}%</span>
+                </div>
+                <div className="size info_150">
+                    <h3>150m²+</h3>
+                    <span>{Math.round(selectedHouse.flats_150 * 100)}%</span>
+                </div>
+                <div className="size info_unknown">
+                    <h3>Unbekannt</h3>
+                    <span>{Math.round(selectedHouse.unknown * 100)}%</span>
+                    </div>
+                </div>
+            </div>
+            <div className="categories">
+                <h2>Gebäudearten (Top 3)</h2>
+                <div>
+                    <div className="category hotels">
+                        <h3>Hotels</h3>
+                        <div className="info_shape"></div>
+                        <span>{selectedHouse.hotels}</span>
+                    </div>
+                    <div className="category offices">
+                        <h3>Büros</h3>
+                        <div className="info_shape"></div>
+                        <span>{selectedHouse.offices}</span>
+                    </div>
+                    <div className="category industrial">
+                        <h3>Industrie</h3>
+                        <div className="info_shape"></div>
+                        <span>{selectedHouse.industrial}</span>
+                    </div>
+                </div>
+            </div>
+            <div className="info_growth">
+                <h2>Wachstum (Neue Wohnungen)</h2>
+                <span>2011 - 2015 <strong>vs.</strong> 2016 - 2020</span>
+                <div className={isPositiveGrowth ? "growth_icon positive" : "growth_icon negative"}>
+                    <div className="growth normal">
+                        <img src={construction} alt="Construction" />
+                    </div>
+                    <span>{selectedHouse.growth}%</span>
+                </div>
+            </div>
+            
         </>
     );
 }
