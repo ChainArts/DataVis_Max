@@ -383,7 +383,7 @@ h3{
     justify-content: center;
     align-items: center;
     padding: 1rem 1.25rem;
-    transform: translate(-25%, 50%);
+    transform: translate(-35%, 65%);
     transition: all 0.25s cubic-bezier(.14, .8, .4, 1);
     cursor: none;
     width: max-content;

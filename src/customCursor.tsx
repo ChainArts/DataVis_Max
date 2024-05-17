@@ -5,7 +5,7 @@ import useMousePos from "./useMousePos";
 const CustomCursor = () => {
     const { x, y } = useMousePos();
     const [isHovered, setIsHovered] = useState(false);
-    const [cursorText, setCursorText] = useState(<div>Hover Me!</div>);
+    const [cursorText, setCursorText] = useState(<div>Hover!</div>);
 
     useEffect(() => {
     const handleHoverStart = (e: MouseEvent) => {
@@ -20,7 +20,7 @@ const CustomCursor = () => {
     const handleHoverEnd = () => {
         
         setIsHovered(false);
-        setCursorText(<div>Hover Me!</div>);
+        setCursorText(<div>Hover!</div>);
     };
 
     
