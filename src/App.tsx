@@ -3,7 +3,8 @@ import House from "./House";
 import Info from "./Info";
 import data from "./db/data.json";
 import { useState } from "react";
-
+import CustomCursor from "./customCursor";
+import { motion } from "framer-motion";
 interface HouseData {
     id: number;
     name: string;
@@ -30,19 +31,20 @@ const App = () => {
         
 
     return (
+        <>
+        <CustomCursor />
         <main>
-            <div className="graph">
+            <motion.div className="graph" transition={{staggerChildren: 0.1}}>
                 {houseData.map((house: HouseData) => {
                     return (
                         <House key={house.name} houseData={house} setSelected={setSelected} />
                     );
                 })}
-            </div>
+            </motion.div>
             <div className="seperator"></div>
-            <div className="info">
-                <Info selected={selected} houseData={houseData} />
-            </div>
-        </main>
+            <Info selected={selected} houseData={houseData} />
+            </main>
+            </>
     );
 };
 

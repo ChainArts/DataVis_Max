@@ -361,3 +361,40 @@ h3{
 .growth.normal img{
     width: 1.25rem;
 }
+
+
+.custom-cursor {
+    line-height: 1;
+    position: fixed;
+    z-index: 999;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+  }
+  
+.custom-cursor.hovered .cursor-bubble {
+    transform: translate(-50%, 50%);
+    background-color: #313244dd;
+}
+
+.custom-cursor .cursor-bubble {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    transform: translate(-25%, 50%);
+    transition: all 0.25s cubic-bezier(.14, .8, .4, 1);
+    cursor: none;
+    width: max-content;
+    background-color: #cdd6f450;
+    border: #cdd6f4 1px solid;
+    backdrop-filter: blur(4px);
+    border-radius: 4px;
+}
+
+.cursor-text{
+    font-size: 1rem;
+    font-weight: 400;
+
+}
